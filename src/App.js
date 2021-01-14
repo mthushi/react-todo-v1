@@ -3,6 +3,7 @@ import {v4 as uuid} from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TodoList from './component/TodoList';
 import TodoInput from './component/TodoInput';
+import './app.css';
 
 class App extends Component{
   
