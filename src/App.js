@@ -14,7 +14,14 @@ class App extends Component{
   };
 
   handleEdit = (id) => {
-    console.log(`Handle edit ${id}`)
+    const filteredItems = this.state.items.filter(items=>items.id!==id);
+    const selectedItems = this.state.items.find(items=>items.id===id);
+    this.setState({
+      items:filteredItems,
+      item:selectedItems.title,
+      id:selectedItems.id,
+      editItem:true
+    })
   };
 
   handleDelete = (id) => {
