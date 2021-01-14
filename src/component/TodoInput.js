@@ -6,14 +6,14 @@ class TodoInput extends Component {
         return (
             <div className="card card-body my-3">
                 <form onSubmit={handleSubmit}>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text bg-primary text-white">
-                            <i class="fas fa-book"/>
+                <div className="input-group">
+                    <div className="input-group-prepend">
+                        <div className="input-group-text bg-primary text-white">
+                            <i className="fas fa-book"/>
                         </div>
                     </div>
                     <input type="text" 
-                    class="form-control text-capitalize" 
+                    className="form-control text-capitalize" 
                     placeholder="enter todo item here"
                     value={item}
                     onChange={handleChange}/>

@@ -18,7 +18,10 @@ class App extends Component{
   };
 
   handleDelete = (id) => {
-    console.log(`Handle delete ${id}`)
+    const filteredItems = this.state.items.filter(items=>items.id!==id);
+    this.setState({
+      items:filteredItems
+    })
   };
 
   handleChange = (e) => {
@@ -46,15 +49,17 @@ class App extends Component{
   };
 
   clearList = () => {
-    console.log('Clear list')
+    this.setState({
+      items:[]
+    })
   };
 
   render() {
     return (
-    <div class="container">
-      <div class="row">
-        <div class="col-10 mx-auto col-md-8 mt-5">
-          <h3 class="text-capitalize text-input">
+    <div className="container">
+      <div className="row">
+        <div className="col-10 mx-auto col-md-8 mt-5">
+          <h3 className="text-capitalize text-input">
             todo input
           </h3>
           <TodoInput 
